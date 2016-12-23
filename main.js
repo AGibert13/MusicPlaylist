@@ -22,7 +22,7 @@
 	var preview = obj.Preview
 	var track = obj.Song
 
-	$('body').append("<div><audio src="+preview" controls></audio><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul></div>")
+	$('body').append("<div><audio src="+preview+ " controls></audio><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul></div>")
 }
 
 
