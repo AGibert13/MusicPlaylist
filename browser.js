@@ -4,15 +4,13 @@
 	var Spotify = require('spotify-web-api-js');
 	var s = new Spotify();
 
-	var spotifyApi = new SpotifyWebApi();
-
 	
 	d3.csv("playlist.csv", function(data){
 		data.forEach(trackCreator)
 	})
 
 	function trackCreator(obj){
-		spotifyApi.search(['track:'+obj.Song, 'artist:'+ obj.Artist])
+		s.search(['track:'+obj.Song, 'artist:'+ obj.Artist])
 			.then(function(data){
 				console.log('Search artist by'+obj.Song, data)
 			})
