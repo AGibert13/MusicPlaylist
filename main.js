@@ -18,10 +18,11 @@
 				var votes = obj.NumVotes
 				var preview = songInfo.preview_url
 				var track = songInfo.name
+				$('body').append("<div><audio src="+preview+ " controls></audio><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul></div>")
 			})
 	
 
-	$('body').append("<div><audio src="+preview+ " controls></audio><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul></div>")
+	
 }
 
 
