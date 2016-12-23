@@ -9,7 +9,7 @@
 	})
 
 	function trackCreator(obj){
-    s.search(obj.Song + " " + obj.Artist, ['track'], options)
+    s.search(obj.Song + " " + obj.Artist, ['track'], {limit: 1})
 			.then(function(data){
 				console.log('Search by'+obj.Song, data)
 			})
