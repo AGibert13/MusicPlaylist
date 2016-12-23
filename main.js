@@ -9,9 +9,9 @@
 	})
 
 	function trackCreator(obj){
-		s.search(['track:'+obj.Song, 'artist:'+ obj.Artist])
+    s.search(obj.Song + " " + obj.Artist, ['track'], options)
 			.then(function(data){
-				console.log('Search artist by'+obj.Song, data)
+				console.log('Search by'+obj.Song, data)
 			})
 	var album = obj.album
 	var albumImg = obj.AlbumImage
