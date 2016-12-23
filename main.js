@@ -11,17 +11,14 @@
 	function trackCreator(obj){
     s.search(obj.Song + " " + obj.Artist, ['track'], {limit: 1})
 			.then(function(data){
-				s.getTrack("6Knv6wdA0luoMUuuoYi2i1")
-					.then(function(data2){
-						console.log( "Track", data)
-					})
+				var songInfo = data.tracks.items[0]
 			})
-	var album = obj.album
-	var albumImg = obj.AlbumImage
-	var artist = obj.Artist
+	var album = songInfo.album.name
+	var albumImg = songInfo.album.images[1]
+	var artist = songInfo.artists[0].name
 	var votes = obj.NumVotes
-	var preview = obj.Preview
-	var track = obj.Song
+	var preview = songInfo.preview_url
+	var track = songInfo.name
 
 	$('body').append("<div><audio src="+preview+ " controls></audio><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul></div>")
 }
