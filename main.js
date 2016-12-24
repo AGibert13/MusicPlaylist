@@ -8,7 +8,7 @@
 		data.forEach(trackCreator)
 	})
 
-	function trackCreator(obj){
+	function trackCreator(obj,index){
     s.search(obj.Song + " " + obj.Artist, ['track'], {limit: 1})
 			.then(function(data){
 				var songInfo = data.tracks.items[0]
@@ -19,7 +19,7 @@
 				var votes = obj.NumVotes
 				var preview = songInfo.preview_url
 				var track = songInfo.name
-				$('#songs').append("<div><audio src="+preview+ " controls></audio><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul></div>")
+				$('#songs').append("<div><span>"+ index+ "<audio src="+preview+ " controls></audio><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul></div>")
 			})
 	
 

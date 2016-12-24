@@ -1,4 +1,17 @@
 #songs div{
     width: 100%;
-    color: rgb(33.5%, 3.4%, 3.4%)
+}
+
+#songs div img{
+    position: fixed;
+    left: 35%
+}
+
+#songs div span{
+    position: fixed;
+    left: 20%
+}
+#songs div ul{
+    position: fixed;
+    left: 50%
 }
