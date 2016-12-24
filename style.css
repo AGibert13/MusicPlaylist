@@ -5,14 +5,19 @@
 #songs div img{
     position: relative;
     /*left: 35%*/
+    height: 50%;
+    width: 50%;
 }
 
 #songs div span{
     position: relative;
+    font-size: 2rem;
+    padding: 10%;
     /*left: 20%*/
 }
 #songs div ul{
     position: relative;
+    font-size: 1.5rem;
     /*left: 50%*/
 }
 
