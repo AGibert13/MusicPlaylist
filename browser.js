@@ -15,6 +15,7 @@
 				var songInfo = data.tracks.items[0]
 				var album = songInfo.album.name
 				var albumImg = songInfo.album.images[1]
+				console.log(albumImg)
 				var artist = songInfo.artists[0].name
 				var votes = obj.NumVotes
 				var preview = songInfo.preview_url
