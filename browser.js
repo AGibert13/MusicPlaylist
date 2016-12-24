@@ -14,7 +14,7 @@
 			.then(function(data){
 				var songInfo = data.tracks.items[0]
 				var album = songInfo.album.name
-				var albumImg = songInfo.album.images[1]
+				var albumImg = songInfo.album.images[1].url
 				console.log(albumImg)
 				var artist = songInfo.artists[0].name
 				var votes = obj.NumVotes
