@@ -3,20 +3,20 @@
 }
 
 #songs div img{
-    position: fixed;
+    position: relative;
     left: 35%
 }
 
 #songs div span{
-    position: fixed;
+    position: relative;
     left: 20%
 }
 #songs div ul{
-    position: fixed;
+    position: relative;
     left: 50%
 }
 
 #songs div audio{
-    position: fixed;
+    position: relative;
     top: 20%
 }
