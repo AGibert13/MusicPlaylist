@@ -4,19 +4,19 @@
 
 #songs div img{
     position: relative;
-    left: 35%
+    /*left: 35%*/
 }
 
 #songs div span{
     position: relative;
-    left: 20%
+    /*left: 20%*/
 }
 #songs div ul{
     position: relative;
-    left: 50%
+    /*left: 50%*/
 }
 
 #songs div audio{
     position: relative;
-    top: 20%
+    /*top: 20%*/
 }
