@@ -9,7 +9,7 @@
 	})
 
 	function trackCreator(obj,index){
-    s.search(obj.Song + " " + obj.Artist, ['track'], {limit: 1})
+    search(obj.Song + " " + obj.Artist, ['track'], {limit: 1})
 			.then(function(data){
 				var songInfo = data.tracks.items[0]
 				var tempSong = songs(songInfo.artists[0].name,songInfo.album.name, songInfo.name, songInfo.album.images[1].url,songInfo.preview_url,obj.NumVotes)
