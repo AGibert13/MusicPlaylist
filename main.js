@@ -1,7 +1,7 @@
 // $(document).ready(function(){
 
-	var Spotify = require('spotify-web-api-js');
-	var s = new Spotify();
+	//var Spotify = require('spotify-web-api-js');
+	//var s = new Spotify();
 	
 	
 	d3.csv("playlist.csv", function(data){
