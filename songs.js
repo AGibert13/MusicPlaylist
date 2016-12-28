@@ -1,7 +1,7 @@
 var Spotify = require('spotify-web-api-js');
 	var s = new Spotify();
     
-function Songs(art, alb, name, albImg, preview, votes = 0){ 
+function songs(art, alb, name, albImg, preview, votes = 0){ 
 	var Song = {
 		artist: art,
 		album: alb,
