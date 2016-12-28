@@ -15,10 +15,10 @@ function songs(art, alb, name, albImg, preview, votes = 0){
 
     Song.getGenre = function(song)
     {
-        var artist = s.getArtist(song.artists[0].id)
+        s.getArtist(song.artists[0].id)
 		.then(function(data){
-			console.log(artist.genres);
-			genre = artist.genres;
+			console.log(data.genres);
+			genre = data.genres;
 		})
     }	
 		
