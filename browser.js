@@ -3,7 +3,7 @@
 
 	var Spotify = require('spotify-web-api-js');
 	var s = new Spotify();
-
+	
 	
 	d3.csv("playlist.csv", function(data){
 		data.forEach(trackCreator)
