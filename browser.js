@@ -13,14 +13,8 @@
     s.search(obj.Song + " " + obj.Artist, ['track'], {limit: 1})
 			.then(function(data){
 				var songInfo = data.tracks.items[0]
-				var album = songInfo.album.name
-				var albumImg = songInfo.album.images[1].url
-				console.log(albumImg)
-				var artist = songInfo.artists[0].name
-				var votes = obj.NumVotes
-				var preview = songInfo.preview_url
-				var track = songInfo.name
-				$('#songs').append("<div><span>"+ index+ "</span><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul><audio src="+preview+ " controls></audio></div>")
+				var tempSong = Songs(songInfo.artists[0].name,songInfo.album.name, songInfo.name, songInfo.album.images[1].url,songInfo.preview_url,obj.NumVotes)
+				tempsong.getGenre(songInfo)
 			})
 	
 

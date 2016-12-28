@@ -1,5 +1,40 @@
+html, body{
+    font-family:'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray
+}
+
+nav{
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+nav span{
+    background-color: black;
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+header img{
+    position:relative;
+    width:100%;
+}
+#info h1{
+    text-align: center;
+}
+
+#info div{
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    text-align:center;
+}
+
 #songs div{
     width: 100%;
+    
 }
 
 #songs div img{
