@@ -13,7 +13,7 @@
 			.then(function(data){
 				var songInfo = data.tracks.items[0]
 				var tempSong = Songs(songInfo.artists[0].name,songInfo.album.name, songInfo.name, songInfo.album.images[1].url,songInfo.preview_url,obj.NumVotes)
-				tempsong.getGenre(songInfo)
+				tempSong.getGenre(songInfo)
 			})
 	
 
