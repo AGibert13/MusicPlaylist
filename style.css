@@ -4,6 +4,13 @@ html, body{
     padding: 0;
     background-color: lightgray
 }
+header{
+    background-color:black;
+}
+#header{
+    position:relative;
+    width:100%;
+}
 
 nav{
     position: relative;
@@ -11,16 +18,23 @@ nav{
     background-color: black;
     color: white;
 }
+nav img, nav input{
+    float: right;
+    margin:.4%;
+}
+nav input{
+    width:20%;
+    font-size: 1rem;
+    border:6px white solid;
+}
 nav span{
-    background-color: black;
-    width: 20%;
+    padding-right: 10%;
     float: left;
+    font-size: 2rem;
     text-align: center;
+    vertical-align:middle;
 }
-header img{
-    position:relative;
-    width:100%;
-}
+
 #info h1{
     text-align: center;
 }
