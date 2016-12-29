@@ -10,7 +10,7 @@ class Song {
 		this.artist = info.artists[0].name;
 		this.album= info.album.name;
 		this.track= info.name;
-		this.albumImage= info..album.images[1].url;
+		this.albumImage= info.album.images[1].url;
 		this.preview = info.preview_url
 		this.votes= votes;
 		this.genre= [];
