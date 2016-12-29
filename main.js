@@ -28,8 +28,10 @@ function trackCreator(obj){
 	search.open('GET', "https://api.spotify.com/v1/search?q=track:"+song+ "+artist:"+artist+"&type=track&limit=1")
 	search.send()
 		search.onreadystatechange = function(){
+			if(this.readyset === 4 && this.status === 200){
 		var tempSong = JSON.parse(this.responseText)
 		console.log(tempSong)
+	}
 	}
 }
 
