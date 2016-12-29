@@ -4,7 +4,7 @@
 //Classes
 
 class Song {
-	constructor(info){ 
+	constructor(info, votes = 0){ 
 		this.artist = info.artists[0].name;
 		this.album= info.album.name;
 		this.track= info.name;
