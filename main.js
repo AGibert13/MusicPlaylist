@@ -50,7 +50,7 @@ class Playlist {
 				search.onreadystatechange = function(){
 					if(this.readyState === 4 && this.status === 200){
 						var songInfo = JSON.parse(this.responseText)
-						songInfo = tempSong.tracks.items[0]
+						songInfo = songInfo.tracks.items[0]
 						var tempSong = new Song(songInfo)
 						tempSong.getGenre(tempSong.info.artist[0].id)
 					}
