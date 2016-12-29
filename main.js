@@ -39,6 +39,7 @@ class Playlist {
 	}
 
 	getSongs(file){
+		var tempArray = []
 		d3.csv(file, function(data){
 			data.forEach(function(obj){
 				var search = new XMLHttpRequest()
@@ -53,11 +54,12 @@ class Playlist {
 						songInfo = songInfo.tracks.items[0]
 						var tempSong = new Song(songInfo, obj.NumVotes)
 						tempSong.getGenre(tempSong.info.artists[0].id)
-						this.songs.push(tempSong)
+						tempArray.push(tempSong)
 					}
 				}
 			})
 		})
+		this.songs = tempArray
 	}
 
 	displaySongs(genre){
