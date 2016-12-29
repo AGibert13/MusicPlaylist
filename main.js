@@ -22,13 +22,14 @@ class Song {
 
     getGenre(id)
     {
+    	var tempGenre
      	var search = new XMLHttpRequest()
      	search.open('GET', "https://api.spotify.com/v1/artists/"+id);
      	search.send();
      	search.onreadystatechange = function(){
 			if(this.readyState === 4 && this.status === 200){
 				var artistInfo = JSON.parse(this.responseText);
-				var tempGenre = artistInfo.genres;
+				tempGenre = artistInfo.genres;
 			}
 		}
 		this.genre =tempGenre
