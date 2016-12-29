@@ -22,15 +22,15 @@
 
 function trackCreator(obj){
 	var search = new XMLHttpRequest()
-	search.onreadystatechange = function(){
-		var tempSong = JSON.parse(this.responseText)
-		console.log(tempSong)
 
-	}
 	var song = obj.Song.replace(" ", "+")
 	var artist = obj.Artist.replace(" ", "+")
 	search.open('GET', "https://api.spotify.com/v1/search?q=track:"+song+ "+artist:"+artist+"&type=track&limit=1")
 	search.send()
+		search.onreadystatechange = function(){
+		var tempSong = JSON.parse(this.responseText)
+		console.log(tempSong)
+	}
 }
 
 
