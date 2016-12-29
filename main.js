@@ -51,7 +51,7 @@ class Playlist {
 					if(this.readyState === 4 && this.status === 200){
 						var songInfo = JSON.parse(this.responseText)
 						songInfo = songInfo.tracks.items[0]
-						var tempSong = new Song(songInfo)
+						var tempSong = new Song(songInfo, obj.NumVotes)
 						tempSong.getGenre(tempSong.info.artist[0].id)
 					}
 				}
