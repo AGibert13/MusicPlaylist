@@ -53,6 +53,7 @@ class Playlist {
 						songInfo = songInfo.tracks.items[0]
 						var tempSong = new Song(songInfo, obj.NumVotes)
 						tempSong.getGenre(tempSong.info.artists[0].id)
+						this.songs.push(tempSong)
 					}
 				}
 			})
