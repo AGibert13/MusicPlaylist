@@ -1,5 +1,3 @@
-var list = new Playlist;
-list.getSongs("playlist.csv")
 
 
 
@@ -71,6 +69,11 @@ class Playlist {
 		})
 	}
 }
+
+//Main
+
+var list = new Playlist;
+list.getSongs("playlist.csv")
 
 //Test Functions
 
