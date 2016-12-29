@@ -23,7 +23,9 @@
 function trackCreator(obj){
 	var search = new XMLHttpRequest()
 	search.onreadystatechange = function(){
-		console.log(this.responseText)
+		var tempSong = JSON.parse(this.responseText)
+		console.log(tempSong)
+
 	}
 	var song = obj.Song.replace(" ", "+")
 	var artist = obj.Artist.replace(" ", "+")
