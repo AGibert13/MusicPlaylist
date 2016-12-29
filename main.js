@@ -28,7 +28,7 @@ function trackCreator(obj){
 	var song = obj.Song.replace(" ", "+")
 	var artist = obj.Artist.replace(" ", "+")
 	search.open('GET', "https://api.spotify.com/v1/search?q=track:"+song+ "+artist:"+artist+"&type=track&limit=1")
-
+	search.send()
 }
 
 
