@@ -1,23 +1,34 @@
 // $(document).ready(function(){
 
 	//var Spotify = require('spotify-web-api-js');
-	var s = new SpotifyWebApi();
+	//var s = new SpotifyWebApi();
 	
 	
 	d3.csv("playlist.csv", function(data){
 		data.forEach(trackCreator)
 	})
 
-	function trackCreator(obj,index){
-    s.search(obj.Song + " " + obj.Artist, ['track'], {limit: 1})
-			.then(function(data){
-				var songInfo = data.tracks.items[0]
-				var tempSong = songs(songInfo.artists[0].name,songInfo.album.name, songInfo.name, songInfo.album.images[1].url,songInfo.preview_url,obj.NumVotes)
-				tempSong.getGenre(songInfo)
-			})
+// 	function trackCreator(obj,index){
+//     s.search(obj.Song + " " + obj.Artist, ['track'], {limit: 1})
+// 			.then(function(data){
+// 				var songInfo = data.tracks.items[0]
+// 				var tempSong = songs(songInfo.artists[0].name,songInfo.album.name, songInfo.name, songInfo.album.images[1].url,songInfo.preview_url,obj.NumVotes)
+// 				tempSong.getGenre(songInfo)
+// 			})
 	
 
 	
+// }
+
+function trackCreator(obj){
+	var search = new XMLHttpRequest()
+	search.onreadystatechange = function(){
+		console.log(this.responseText)
+	}
+	var song = obj.Song.replace(" ", "+")
+	var artist = obj.Artist.replace(" ", "+")
+	search.open('GET', "https://api.spotify.com/v1/search?q=track:"+song+ "+artist:"+artist+"&type=track&limit=1")
+
 }
 
 
