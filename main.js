@@ -107,8 +107,7 @@ list.getSongs("playlist.csv")
 $('#songs').keypress(function(){
 	var val = $("input").val();
 		list.searchSong(val)
-	}
-
+	
 })
 
 //Test Functions
