@@ -53,8 +53,8 @@ class Playlist {
 			data.forEach(function(obj){
 				var search = new XMLHttpRequest()
 
-				var song = obj.Song.replace(" ", "+")
-				var artist = obj.Artist.replace(" ", "+")
+				var song = obj.Song.replace(" "/g, "+")
+				var artist = obj.Artist.replace(" "/g, "+")
 				search.open('GET', "https://api.spotify.com/v1/search?q=track:"+song+ "+artist:"+artist+"&type=track&limit=1")
 				search.send()
 				search.onreadystatechange = function(){
