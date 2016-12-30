@@ -80,12 +80,36 @@ class Playlist {
 			})
 		})
 	}
+
+	searchSong(text){
+		var search = new XMLHttpRequest();
+
+		var param = text.replace(/ /g, "+")
+		search.open("GET", "https://api.spotify.com/v1/search?q="+param+"&type=album,track,artist&limit=10")
+		search.send()
+		search.onreadystatechange = function(){
+			if(this.readyState === 4 && this.status === 200){
+				var songInfo = JSON.parse(this.responseText)
+				songInfo = songInfo.tracks.items
+				songinfo.forEach(function(j){
+					console.log(j)
+				})
+			}
+		}
+	}
 }
 
 //Main
 
 var list = new Playlist;
 list.getSongs("playlist.csv")
+
+$('#songs').keypress(function(){
+	var val = $("input").val();
+		list.searchSong(val)
+	}
+
+})
 
 //Test Functions
 
