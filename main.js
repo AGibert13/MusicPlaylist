@@ -20,19 +20,19 @@ class Song {
         $('#songs').append("<div><span>"+ index+ "</span><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul><audio src="+preview+ " controls></audio></div>")
     }
 
-    getGenre(id)
+    getGenre(id,obj)
     {
-    	var tempGenre
+    	
      	var search = new XMLHttpRequest()
      	search.open('GET', "https://api.spotify.com/v1/artists/"+id);
      	search.send();
      	search.onreadystatechange = function(){
 			if(this.readyState === 4 && this.status === 200){
 				var artistInfo = JSON.parse(this.responseText);
-				tempGenre = artistInfo.genres;
+				obj.genre = artistInfo.genres;
 			}
 		}
-		this.genre =tempGenre
+		 
     }	
 		
 		
@@ -62,7 +62,7 @@ class Playlist {
 						var songInfo = JSON.parse(this.responseText)
 						songInfo = songInfo.tracks.items[0]
 						var tempSong = new Song(songInfo, obj.NumVotes)
-						tempSong.getGenre(tempSong.info.artists[0].id)
+						tempSong.getGenre(tempSong.info.artists[0].id, tempSong)
 						tempArray.push(tempSong)
 					}
 				}
