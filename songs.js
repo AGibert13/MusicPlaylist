@@ -4,7 +4,8 @@ function songs(art, alb, name, albImg, preview, votes = 0){
 		album: alb,
 		track: name,
 		albumImage: albImg,
-		votes: votes
+		votes: votes,
+		genre: []
 	};
 
     Song.displaySong =function()
@@ -14,8 +15,11 @@ function songs(art, alb, name, albImg, preview, votes = 0){
 
     Song.getGenre = function(song)
     {
-        var artist = s.getArtist(song.artists[0].id)
-        console.log(artist)
+        s.getArtist(song.artists[0].id)
+		.then(function(data){
+			console.log(data.genres);
+			genre = data.genres;
+		})
     }	
 		
 		

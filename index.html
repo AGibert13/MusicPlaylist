@@ -6,15 +6,27 @@
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body>
-	<nav>
-			<span>Hip-Hop</span>
-			<span>Rock</span>
-			<span>Pop</span>
-			<span>County</span>
-			<span>R&B</span>
-	</nav>
+
 	<header>
-		<img src="header.jpg">
+	<span id="hambugerMenu" >☰</span>
+	<nav>
+		<ul>
+			<li>Hip-Hop</li>
+			<li>Rock</li>
+			<li>Pop</li>
+			<li>Country</li>
+			<li>R&B</li>
+		</ul>
+		<img src="search.png" id="search">
+		<input type="search" list="songs" placeholder="Search..">
+		<datalist id="songs">
+			<select>
+
+			</select>
+		</datalist>
+	</nav>
+
+		<img src="header.jpg" id="header">
 	</header>
 	
 	<section id = "info">
@@ -43,8 +55,7 @@
 	</div>
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="songs.js"></script>
 <script src="main.js"></script>
-<script src="spotify-web-api.js"></script>
+
 </body>
 </html>
