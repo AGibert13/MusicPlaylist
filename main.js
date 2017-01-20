@@ -73,7 +73,7 @@ class Playlist {
 			})
 		})
 		this.songs = tempArray.sort(function(a,b){
-			return b.votes - a.votes
+			return a.votes - b.votes
 		})
 	}
 
