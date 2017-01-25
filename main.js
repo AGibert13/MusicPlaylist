@@ -38,7 +38,7 @@ class Song {
 		
         addVote()
         {
-            votes+=1
+            this.votes+=1
         }
     }
 
@@ -98,9 +98,14 @@ $('#songs').keypress(function(){
 	list.searchSong(val);
 	
 })
+/*The 'uploadCSV' function makes a request pull the information from the file specified.
+    It then splits the text information by line (including the header). For each line,
+    the respective value is placed with the correct header into an object. The object is
+    then stored into an array, which is then used in a function to be specified.
+  */
 function uploadCSV(file, callback){
     var csv = new XMLHttpRequest();
-    csv.open("GET", "playlist.csv");
+    csv.open("GET", file);
     csv.send();
     csv.onreadystatechange = function(){
         if(this.readyState === 4 && this.status === 200){
