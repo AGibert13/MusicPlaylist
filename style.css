@@ -2,8 +2,8 @@ html, body{
     font-family:'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: lightgray
-
+    background-color: lightgray;
+    font-size:18px
 }
 header{
     background-color:black;
@@ -12,6 +12,16 @@ header{
 #header{
     position:relative;
     width:100%;
+}
+
+#headTxt{
+    position:absolute;
+    top: 9%;
+    z-index:1;
+    font-size:5rem;
+    text-align:center;
+    width: 100%;
+    letter-spacing: 7px;
 }
 
 nav{
@@ -24,6 +34,7 @@ nav{
 nav img, nav input{
     float: right;
     margin:.5%;
+    cursor: pointer;
 }
 nav input{
     width:20%;
@@ -31,17 +42,19 @@ nav input{
     border:6px white solid;
 }
 nav ul{
-    display:none;
-    width:0;
+    width: 10%;
+    height: 100%;
     position: fixed;
-    z-index:3;
-    top:0;
-    left:0;
-    background-color:rgb(149, 0, 0);
+    z-index: 3;
+    left: -20%;
+    background-color: black;
     font-size: 1.5em;
+    margin-top: 0;
 }
 ul li{
     list-style-type: none;
+    font-size: 2rem;
+    padding: 5%;
 }
 
 #hambugerMenu{
@@ -50,6 +63,10 @@ ul li{
     left:0;
     z-index: 3;
     font-size:2rem;
+    cursor: pointer;
+}
+#info{
+    font-size: 1.5rem;
 }
 #info h1{
     text-align: center;
@@ -89,4 +106,24 @@ ul li{
 #songs div audio{
     position: relative;
     /*top: 20%*/
+}
+#search{
+    cursor: pointer;
+}
+#genres {
+    width: 100%;
+} 
+button{
+    width: 33.33%;
+    padding: 6%;
+    font-size: 2rem;
+    background-color:black;
+    background:;
+    background-size: cover;
+    color: white;
+    cursor: pointer;
+    border: 0;
+}
+button.overlay{
+
 }
