@@ -38,7 +38,7 @@ class Song {
 		
         addVote()
         {
-            this.votes+=1
+            votes+=1
         }
     }
 
@@ -98,14 +98,9 @@ $('#songs').keypress(function(){
 	list.searchSong(val);
 	
 })
-/*The 'uploadCSV' function makes a request pull the information from the file specified.
-    It then splits the text information by line (including the header). For each line,
-    the respective value is placed with the correct header into an object. The object is
-    then stored into an array, which is then used in a function to be specified.
-  */
 function uploadCSV(file, callback){
     var csv = new XMLHttpRequest();
-    csv.open("GET", file);
+    csv.open("GET", "playlist.csv");
     csv.send();
     csv.onreadystatechange = function(){
         if(this.readyState === 4 && this.status === 200){
@@ -156,7 +151,7 @@ $('#x').click(function(){
 var genres = ["All Songs","Hip Hop", "Rock", "Pop", "Country", "R&B"]
 
 genres.forEach(function(data){
-    var gButton = "<button type=\"button\" style=\" background:linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(" + data.replace(" ", "_")+ ".jpg); background-size: cover;\">" + data + "</button>"
+    var gButton = "<button type=\"button\" style=\" background:linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(images/" + data.replace(" ", "_")+ ".jpg); background-size: cover;\">" + data + "</button>"
     $('#genres').append(gButton)
 })
 $('button').mouseenter(function(data){

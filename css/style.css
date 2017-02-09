@@ -1,0 +1,129 @@
+html, body{
+    font-family:'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    font-size:18px
+}
+header{
+    background-color:black;
+    color: white;
+}
+#header{
+    position:relative;
+    width:100%;
+}
+
+#headTxt{
+    position:absolute;
+    top: 9%;
+    z-index:1;
+    font-size:5rem;
+    text-align:center;
+    width: 100%;
+    letter-spacing: 7px;
+}
+
+nav{
+    position: fixed;
+    z-index:2;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+nav img, nav input{
+    float: right;
+    margin:.5%;
+    cursor: pointer;
+}
+nav input{
+    width:20%;
+    font-size: 1rem;
+    border:6px white solid;
+}
+nav ul{
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+    left: -20%;
+    background-color: black;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+ul li{
+    list-style-type: none;
+    font-size: 2rem;
+    padding: 5%;
+}
+
+#hambugerMenu{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 3;
+    font-size:2rem;
+    cursor: pointer;
+}
+#info{
+    font-size: 1.5rem;
+}
+#info h1{
+    text-align: center;
+}
+
+#info div{
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    text-align:center;
+}
+
+#songs div{
+    width: 100%;
+    
+}
+
+#songs div img{
+    position: relative;
+    /*left: 35%*/
+    height: 50%;
+    width: 50%;
+}
+
+#songs div span{
+    position: relative;
+    font-size: 2rem;
+    padding: 10%;
+    /*left: 20%*/
+}
+#songs div ul{
+    position: relative;
+    font-size: 1.5rem;
+    /*left: 50%*/
+}
+
+#songs div audio{
+    position: relative;
+    /*top: 20%*/
+}
+#search{
+    cursor: pointer;
+}
+#genres {
+    width: 100%;
+} 
+button{
+    width: 33.33%;
+    padding: 6%;
+    font-size: 2rem;
+    background-color:black;
+    background:;
+    background-size: cover;
+    color: white;
+    cursor: pointer;
+    border: 0;
+}
+button.overlay{
+
+}
