@@ -4,7 +4,7 @@
 //Classes
 
 class Song {
-    constructor(info, votes = 0){ 
+    constructor(info, votes){ 
         this.artist = info.artists[0].name;
         this.album= info.album.name;
         this.track= info.name;
@@ -15,9 +15,9 @@ class Song {
         this.info = info;
     };
 
-        displaySong()
+        displaySong(index)
         {
-            $('#songs').append("<div><span>"+ index+ "</span><img src="+albumImg+"><ul><li>" + track + "</li><li>" + artist+ "</li><li>"+ album + "</li><li>"+ votes + "</ul><audio src="+preview+ " controls></audio></div>")
+            $('#songs').append("<div><span>"+ index+ "</span><img src="+ this.albumImg +"><ul><li>" + this.track + "</li><li>" + this.artist+ "</li><li>"+ this.album + "</li><li>"+ this.votes + "</ul><audio src="+this.preview+ " controls></audio></div>")
         }
 
         getGenre(id,obj)
@@ -77,14 +77,21 @@ class Song {
         });
     };
 
-    displaySongs(genre){
-        this.songs.forEach(function(j){
-            j.genre.forEach(function(z){
-                if (z === genre) {
-                    j.displaySong;
-                };
+    displaySongs(genre) {
+        if (genre === "All Songs") {
+            this.songs.forEach(function (j, count) {
+                j.displaySong(count);
             });
-        });
+        }
+        else {
+            this.songs.forEach(function (j, count) {
+                j.genre.forEach(function (z) {
+                    if (z === genre) {
+                        j.displaySong(count);
+                    };
+                });
+            })
+        };
     };
 };
 
@@ -163,6 +170,13 @@ $('button').mouseleave(function(data){
     var background = $(this).attr("style")
     background = background.replace("00", "45")
     $(this).attr("style", background)
+})
+
+$('button').click(function(data){
+    $('#home').css("display", "none")
+    
+    var selectedGenre = $(this).text()
+    list.displaySongs(selectedGenre)
 })
 //Test Functions
 
